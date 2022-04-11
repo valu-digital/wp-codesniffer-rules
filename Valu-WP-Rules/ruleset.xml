@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Valu WordPress Theme Coding Standards" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+    <description>Valu WordPress Theme Coding Standards</description>
+    <arg value="psvn"/>
+    <arg name="extensions" value="php"/>
+    <file>.</file>
+
+    <rule ref="WordPress.Security"/>
+
+    <!-- Do not blame functions that are just fine. Key must be unique and value is the function or namespace name -->
+    <rule ref="WordPress.Security.EscapeOutput">
+        <properties>
+            <property name="customAutoEscapedFunctions" type="array">
+                <element key="pll_esc_html__" value="pll_esc_html__"/>
+                <element key="pll_esc_attr__" value="pll_esc_attr__"/>
+                <element key="Helpers" value="Helpers"/> <!-- This allows for example echo Helpers\esc_wysiwyg( $variable ); and also everything else starting with Helpers... -->
+                <element key="sakke_esc_wysiwyg" value="sakke_esc_wysiwyg"/>
+                <element key="juicer_feed" value="juicer_feed"/>
+                <element key="facetwp_display" value="facetwp_display"/>
+            </property>
+        </properties>
+    </rule>
+
+    <!-- Covers rule: Note the comma after the last array item: this is recommended. -->
+    <rule ref="WordPress.Arrays.CommaAfterArrayItem"/>
+
+</ruleset>
