@@ -2,6 +2,7 @@
     "name": "valu/wp-codesniffer-rules",
     "type": "phpcodesniffer-standard",
     "description": "PHP_CodeSniffer rules (sniffs) to enforce Valu WP coding conventions",
+    "license": "MIT",
     "require": {
         "php": ">=5.4",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
