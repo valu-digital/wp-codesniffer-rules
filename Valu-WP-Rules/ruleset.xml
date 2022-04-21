@@ -15,6 +15,7 @@
                 <element key="pll_esc_attr__" value="pll_esc_attr__"/>
                 <element key="Helpers" value="Helpers"/> <!-- This allows for example echo Helpers\esc_wysiwyg( $variable ); and also everything else starting with Helpers... -->
                 <element key="sakke_esc_wysiwyg" value="sakke_esc_wysiwyg"/>
+                <element key="esc_wysiwyg" value="esc_wysiwyg"/>
                 <element key="juicer_feed" value="juicer_feed"/>
                 <element key="facetwp_display" value="facetwp_display"/>
             </property>
